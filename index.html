@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<div>
+
+		<img src="image/wheel.png" alt="" class="wheel">
+	
+	
+		<img src="image/pointer.png" alt="" class="pointer">
+
+	
+		<img src="image/spin.png" alt="" class="spin" onclick="rotate()">
+
+
+	<script type="text/javascript">
+		
+	function rotate(){
+		var a = 100;
+		var rand = Math.floor(Math.random() * 100);
+		var deg = rand*18;
+
+			document.getElementsByTagName("img")[0].style.transform="rotate("+deg+"deg)";
+			var qaliq = rand%20;
+			if (qaliq%2==1 || qaliq==1){
+				setTimeout(function(){alert("LOSE")}, 3000);
+			}
+			else if(qaliq%2==0){
+				setTimeout(function(){alert("WON")}, 3000);
+			}
+			
+			console.log(qaliq)
+	}
+
+	</script>
+	</div>
+</body>
+</html>
